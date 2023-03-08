@@ -1,73 +1,44 @@
-/* Switch
+/*if e else */
 
-É usado para realizar diferentes ações com base em diferentes condições
-no mesmo bloco de verificação. Caso a condição não seja compatível
-não será executada e o valor padrão será acionado.
+//var interrupitor = "on"
 
+if (interrupitor == "off") {
 
-function verificaCor() {
-    let cor = document.getElementById("cor").value;
-    cor = cor.toLowerCase();
+    alert('A lampada está ligada')
 
-
-    switch (cor) {
-        case "azul":
-            document.body.style.background = "blue"
-            break;
-        
-            case "vermelho":
-            document.body.style.background ="red"                
-            break;
-        case "amarelo":
-            document.body.style.background = "yellow"               
-             break;
-
-             default:
-            
-        document.getElementById("teste").innerHTML = "A cor: " + " ' " +cor + " ' " + " não está disponivel"
-        //Definição padrão
-    }
+} else{
+alert('A lampada está desligada')
 
 }
 
-*/
+var hora = new Date().getHours()
+
+if (hora < 12) {
+
+    //alert('Bom dia');
+}
+
+else if(hora < 18) {
+    //alert('Boa tarde');
+
+} else {
+    //alert('Boa noite');
+
+}
 
 
-function diaDaSemana() {
-    var dia = new Date().getDay();
 
-    if (dia==1) {
-        alert('Hoje é : Segunda')
 
+function verificar() {
+    let nome = document.getElementById("nome").value;
+
+    if (nome == "" || nome == null) {
+        
+        let p = document.getElementById("teste").innerHTML = "O campo não pode ser vazio"
+       
+    } else{
+        let p = document.getElementById("teste").innerHTML = "Parabéns, tudo certo!"
+        p.style.color = "green"
     }
 
-    if (dia==2) {
-        alert('Hoje é :  Terça')
-
-    }
-    
-    if (dia==3) {
-        //alert('Hoje é :  Quarta')
-        document.getElementById("teste").innerHTML = "Hoje é :  Quarta"
-    }
-
-    if (dia==4) {
-        alert('Hoje é :  Quinta')
-
-    }
-
-    if (dia==5) {
-        alert('Hoje é :  Sexta')
-
-    }
-
-    if (dia==6) {
-        alert('Hoje é :  Sábado')
-
-    }
-
-    if (dia==7) {
-        alert('Hoje é :  Domingo')
-
-    }
 }

@@ -18,12 +18,36 @@ body{
 </style>
 
 
-<body>
+<body onload="onload()">
     
     <h1>Aprendendo JavaScript</h1>
     <p id="texto"></p>
-    <button onclick="alertahello()">Clique aqui</button>
+    <button onclick="eventoclick()">Clique aqui
+    </button> <br>
+    <button ondblclick="eventoclickduplo()">Clique aqui 2x
+    
+        <select onchange="mudou()" id="itens">
+        
+            <option value="1" valor 1></option>
+            <option value="2" valor 2></option>
+            <option value="3" valor 3></option>
+            <option value="4" valor 4></option>
+            
+             </select>
+    
+    </button> <br><br>
+
+    <div id="teste" onmousedown="clicounatela()" onmouseout="viraAzul()" onmouseover="viraVermelho()" style="width: 80%; height: 200px; background-color: blue; margin: auto;"></div>
+
     <script src="js/index.js"></script>
+
+
+    <br>
+    <br>
+
+    <input onkeypress="teclapressionada()" onblur="eventoclick()" onchange="mudou()" onfocus="limapTexto()" id="compoTexto" style="padding:80px; font-size: 40px;" type="text" placeholder="Digite alguma coisa" value="Login:">
+
+
 </body>
 
 
